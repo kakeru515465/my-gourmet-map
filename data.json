@@ -250,6 +250,12 @@
                 "menu": "ジャンボ焼き鳥、豚串",
                 "comment": "★その時の感想・思い出",
                 "photos": ["images/江別市/三美焼鳥 江別本店_2025年5月5日.jpg"]
+            },
+            {
+                "date": "2026年11月3日",
+                "menu": "ジャンボ焼き鳥、鶏めし",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/三美焼鳥 江別本店_2026年11月3日.jpg"]
             }
         ]
     },
@@ -414,7 +420,7 @@
             }
         ]
     },
-    "babyface_planets": {
+    "babyface_planets_asahikawa_chuwa": {
         "name": "ベビーフェイスプラネッツ 旭川忠和店",
         "city": "旭川市",
         "genre": ["洋食", "カフェ"],
@@ -657,6 +663,38 @@
                 "menu": "岩塩、ミニチャーマヨ丼",
                 "comment": "★その時の感想・思い出",
                 "photos": ["images/旭川市/ラーメン＆カフェ風沙-ふうしゃ-_2025年8月18日.jpg"]
+            }
+        ]
+    },
+    "little_spoon_hokudai_byoinmae": {
+        "name": "リトルスプーン 北大病院前店",
+        "city": "札幌市",
+        "genre": ["カレー"],
+        "tags": "",
+        "url": "",
+        "map": "https://maps.app.goo.gl/NprHjCpygQtL37qk6",
+        "history": [
+            {
+                "date": "2026年11月3日",
+                "menu": "ザンギカレー大盛り",
+                "comment": "",
+                "photos": ["images/札幌市/リトルスプーン 北大病院前店_2026年11月3日.jpg"]
+            }
+        ]
+    },
+    "babyface_planets_higashiku_yakushomae": {
+        "name": "ベビーフェイスプラネッツ 東区役所前店",
+        "city": "札幌市",
+        "genre": ["洋食", "カフェ"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/eseZz2GCRv7NcMxk9",
+        "history": [
+            {
+                "date": "2026年10月31日",
+                "menu": "チーズインオムカレー(マルゲリータ4人で分けた写真なし)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/ベビーフェイスプラネッツ 東区役所前店_2026年10月31日.jpg"]
             }
         ]
     },
