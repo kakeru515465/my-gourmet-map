@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>パターンA：写真主役ギャラリー</title>
+    <style>
+        body { font-family: sans-serif; background: #f5f5f5; padding: 20px; }
+        .shop-name { color: #007bff; cursor: pointer; font-size: 24px; display: inline-block; }
+        .shop-name:hover { text-decoration: underline; }
+
+        /* ポップアップ（背景の黒い幕） */
+        .modal-overlay {
+            display: none; /* 最初は隠しておく */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7); justify-content: center; align-items: center;
+        }
+        /* ポップアップの中身の白い箱 */
+        .modal-content {
+            background: white; width: 90%; max-width: 500px;
+            border-radius: 12px; overflow: hidden; position: relative;
+            max-height: 80vh; overflow-y: auto; /* 縦に長くなったらスクロール */
+        }
+        /* メインのド迫力写真のダミー */
+        .main-photo {
+            width: 100%; height: 250px; background: #e0e0e0;
+            display: flex; align-items: center; justify-content: center; font-size: 18px; color: #666;
+        }
+        .info-area { padding: 20px; }
+        /* タイムライン（歴史）のデザイン */
+        .history-item {
+            border-left: 3px solid #007bff; padding-left: 15px; margin-bottom: 15px; position: relative;
+        }
+        .history-date { font-weight: bold; color: #333; font-size: 14px; }
+        .history-comment { color: #666; font-size: 14px; margin: 5px 0 0 0; }
+        .close-btn {
+            position: absolute; top: 10px; right: 15px; font-size: 24px;
+            cursor: pointer; color: #333; background: white; border-radius: 50%; width: 30px; height: 30px; text-align: center; line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📍 飯ログ（パターンA検証）</h1>
+    <p>下のお店（リンク風）をクリックしてみてね 👇</p>
+    
+    <h3 class="shop-name" onclick="openModal()">らーめん山頭火 旭川本店</h3>
+
+    <div class="modal-overlay" id="myModal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <div class="main-photo">🖼️ ここに自分で撮った一番いい写真（ラーメン）</div>
+            
+            <div class="info-area">
+                <h2>らーめん山頭火 旭川本店</h2>
+                <hr>
+                <h4>🕒 訪問の歴史</h4>
+                
+                <div class="history-item">
+                    <div class="history-date">📅 2026年6月5日 訪問</div>
+                    <p class="history-comment">チャーシューがトロトロで最高だった。やっぱりしおラーメン！</p>
+                </div>
+                <div class="history-item">
+                    <div class="history-date">📅 2025年12月15日 訪問</div>
+                    <p class="history-comment">雪の降る中の本店は格別。スープまで完飲。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('myModal').style.display = 'flex'; }
+        function closeModal() { document.getElementById('myModal').style.display = 'none'; }
+    </script>
+</body>
+</html>

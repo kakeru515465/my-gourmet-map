@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>パターンB：図鑑風2カラム</title>
+    <style>
+        body { font-family: sans-serif; background: #f5f5f5; padding: 20px; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .shop-name { color: #28a745; cursor: pointer; font-size: 24px; display: inline-block; }
+        .shop-name:hover { text-decoration: underline; }
+
+        /* 図鑑エリア（最初は隠しておく） */
+        .zukan-panel {
+            display: none; /* クリックしたら show-zukan がついて表示される */
+            background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 30px; display: flex; overflow: hidden; border: 2px solid #28a745;
+        }
+        /* 左側：基本情報 */
+        .zukan-left {
+            width: 40%; background: #ebf7ee; padding: 20px; border-right: 1px solid #ddd;
+        }
+        /* 右側：思い出タイムライン */
+        .zukan-right {
+            width: 60%; padding: 20px; max-height: 400px; overflow-y: auto;
+        }
+        .zukan-photo-mini {
+            width: 100%; height: 120px; background: #ccc; margin-top: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 12px; color: #555;
+        }
+        .history-box {
+            background: #f9f9f9; padding: 10px; border-radius: 6px; margin-bottom: 15px;
+        }
+        .history-date { font-weight: bold; color: #28a745; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📍 飯ログ（パターンB検証）</h1>
+        <p>下のお店（リンク風）をクリックしてみてね 👇</p>
+        
+        <h3 class="shop-name" onclick="toggleZukan()">らーめん山頭火 旭川本店</h3>
+
+        <div class="zukan-panel" id="myZukan" style="display: none;">
+            
+            <div class="zukan-left">
+                <h2>らーめん山頭火 旭川本店</h2>
+                <p><strong>エリア：</strong> 旭川市</p>
+                <p><strong>ジャンル：</strong> ラーメン</p>
+                <a href="https://www.santouka.co.jp/shop-jp" target="_blank" style="color: #28a745;">👉 公式サイトを見る</a>
+            </div>
+            
+            <div class="zukan-right">
+                <h3>📖 獲得した思い出（訪問履歴）</h3>
+                
+                <div class="history-box">
+                    <span class="history-date">🏆 2026/06/05</span>
+                    <p style="margin: 5px 0;">しおらーめんと大盛りチャーシュー</p>
+                    <div class="zukan-photo-mini">🖼️ ここに当日撮った写真A</div>
+                </div>
+
+                <div class="history-box">
+                    <span class="history-date">🥈 2025/12/15</span>
+                    <p style="margin: 5px 0;">寒さに凍えながら食べた伝説の一杯</p>
+                    <div class="zukan-photo-mini">🖼️ ここに当日撮った写真B</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleZukan() {
+            var zukan = document.getElementById('myZukan');
+            if (zukan.style.display === 'none') { zukan.style.display = 'flex'; } 
+            else { zukan.style.display = 'none'; }
+        }
+    </script>
+</body>
+</html>
