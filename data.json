@@ -1,0 +1,1565 @@
+{
+    "00_template": {
+        "//1": "▼ 新しいお店を追加するときは、この下をコピーして使ってください",
+        "//genre_memo": "単体なら [\"ラーメン\"] 、複数なら [\"ラーメン\", \"炒飯\"] と書いてください",
+        "//photos_memo": "単体なら [\"画像パス\"] 、複数なら [\"画像1パス\", \"画像2パス\"] と書いてください",
+        "name": "★お店の名前",
+        "city": "★〇〇市",
+        "genre": ["★ジャンル1", "★ジャンル2"],
+        "tags":["なければ空白あれば、javascriptのTAG_MAPから選択"],
+        "url": "★公式サイトなどのURL（なければ空白）",
+        "map": "★GoogleマップのURL（なければ空白）", 
+        "history": [
+            {
+                "date": "★〇年〇月〇日",
+                "menu": "★食べたメニュー名",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/★保存した写真のファイル名.jpg"]
+            }
+        ]
+    },
+    "sarasen_no_mugi": {
+        "name": "手打ち蕎麦サラセン人の麦",
+        "city": "江別市",
+        "genre": ["そば"],
+        "tags": ["ebetsu-son"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/cYANHHCsLaX4v3JN6",
+        "history": [
+            {
+                "date": "2026年10月25日",
+                "menu": "鴨南そば(大盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/手打ち蕎麦サラセン人の麦_2026年10月25日.jpg"]
+            }
+        ]
+    },
+    "touka": {
+        "name": "中華料理 灯華",
+        "city": "江別市",
+        "genre": ["中華料理", "ラーメン"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/PDFRhUJjPVfizprh7",
+        "history": [
+        {
+            "date": "2026年10月3日",
+            "menu": "タルタルたっぷりチキン南蛮定食",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/江別市/灯華_2026年10月5日.jpg"]
+        }
+        ]
+    },
+    "restaurant_aoi": {
+        "name": "レストランあおい",
+        "city": "江別市",
+        "genre": ["洋食", "和食", "中華"],
+        "url": "https://restaurant-aoi.jp/",
+        "map": "https://maps.app.goo.gl/5QvZEGT3zqqJimDq7",
+        "history": [
+        {
+            "date": "2026年9月22日",
+            "menu": "極旨カツカレー(大盛り)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/江別市/レストランあおい_2026年9月22日.jpg"]
+        }
+        ]
+    },
+    "yakisobajiro": {
+        "name": "やきそばじろ",
+        "city": "江別市",
+        "genre": ["やきそば"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/EXDiGsEy1iGh6TMt6",
+        "history": [
+        {
+            "date": "2026年8月22日",
+            "menu": "おてんば焼きそば",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/江別市/やきそばじろ_2026年8月22日.jpg"]
+        },
+        {
+            "date": "2026年9月17日",
+            "menu": "オム焼きそば(大盛り)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/江別市/やきそばじろ_2026年9月17日.jpg"]
+        }
+        ]
+    },
+    "tenmai": {
+        "name": "天味",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/VPBZe1HNWPrQHLnZA",
+        "history": [
+        {
+            "date": "2026年8月16日",
+            "menu": "半チャーハンセット(塩)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/江別市/天味_2026年8月16日.jpg"]
+        }
+        ]
+    },
+    "ginparo": {
+        "name": "らぁめん銀波露 江別本店",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "http://ginparou.com/",
+        "map": "https://maps.app.goo.gl/cTiMsJFrgY4L8LHd7",
+        "history": [
+            {
+                "date": "2025年10月19日",
+                "menu": "醬油ラーメン、ねぎまよチャーシュー、ぱいくぅ丼",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/らぁめん銀波露 江別本店_2025年10月19日.jpg"]
+            }
+        ]
+    },
+    "yoshiyukiya": {
+        "name": "らあめん義ゆき家",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/ijG2X7A1DnL9VXD96",
+        "history": [
+            {
+                "date": "2026年5月31日",
+                "menu": "油そば、炒飯",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/らあめん義ゆき家_2026年5月31日.jpg","images/江別市/らあめん義ゆき家_2026年5月31日(1).jpg"]
+            }
+        ]
+    },
+    "jurin": {
+        "name": "定食・お食事処 樹林",
+        "city": "江別市",
+        "genre": ["定食", "食堂"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/q6FCWEDbAuqw3mzS8",
+        "history": [
+            {
+                "date": "2026年1月30日",
+                "menu": "スパカツ大盛りチーズトッピング",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/定食・お食事処 樹林_2026年1月30日.jpg"]
+            }
+        ]
+    },
+    "kazamidori": {
+        "name": "かざみ鳥のごはん屋さん",
+        "city": "江別市",
+        "genre": ["定食", "カフェ"],
+        "tags":"",
+        "url": "https://kazamidorinogohanyasan.com/",
+        "map": "https://maps.app.goo.gl/ovp4ndgXuRnaNQPr6",
+        "history": [
+            {
+                "date": "2025年11月9日",
+                "menu": "チキン南蛮",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/かざみ鳥のごはん屋さん_2025年11月9日.jpg"]
+            }
+        ]
+    },
+    "genten": {
+        "name": "原ゝ (げんてん)",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "https://www.oneteam.co.jp/genten/index.html",
+        "map": "https://maps.app.goo.gl/Xgy9tjcptTRC6WvD7",
+        "history": [
+            {
+                "date": "2025年6月7日",
+                "menu": "こくうま炒飯、味噌ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/原ゝ (げんてん)_2025年6月7日.jpg"]
+            },
+            {
+                "date": "2026年1月29日",
+                "menu": "学生セット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/原ゝ (げんてん)_2026年1月29日.jpg"]
+            },
+            {
+                "date": "2026年6月28日",
+                "menu": "学生セット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/原ゝ (げんてん)_2026年7月9日.jpg","images/江別市/原ゝ (げんてん)_2026年7月9日(1).jpg"]
+            }
+        ]
+    },
+    "bravopapa": {
+        "name": "ブラボーパパ",
+        "city": "江別市",
+        "genre": ["洋食", "カフェ"],
+        "tags":["ebetsu-son"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/EzoRcxRuwmN9uJTy9",
+        "history": [
+            {
+                "date": "2025年9月28日",
+                "menu": "ハンバーグオムライス",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/ブラボーパパ_2025年9月28日.jpg"]
+            },
+            {
+                "date": "2026年5月2日",
+                "menu": "ビーフシチューハンバーグ",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/ブラボーパパ_2026年5月2日.jpg"]
+            },
+            {
+                "date": "2026年6月28日",
+                "menu": "ビーフシチューオムライス",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/ブラボーパパ_2026年6月28日.jpg"]
+            }
+        ]
+    },
+    "hiro": {
+        "name": "江別拉麺 博",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/KxDeV69j9eqCvDRy8",
+        "history": [
+            {
+                "date": "2025年4月29日",
+                "menu": "炙りチャーシュー麺",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/江別拉麺 博_2025年4月29日.jpg.jpg"]
+            }
+        ]
+    },
+    "mibi_yakitori": {
+        "name": "三美焼鳥 江別本店",
+        "city": "江別市",
+        "genre": ["焼き鳥"],
+        "url": "https://mibiyakitori.com/",
+        "map": "https://maps.app.goo.gl/PYp6M7DtAzvMjuJW7",
+        "history": [
+            {
+                "date": "2025年5月5日",
+                "menu": "ジャンボ焼き鳥、豚串",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/三美焼鳥 江別本店_2025年5月5日.jpg"]
+            }
+        ]
+    },
+    "hajime": {
+        "name": "味処 一",
+        "city": "江別市",
+        "genre": ["定食", "居酒屋"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/wSYJCYQyujzBpYe3A",
+        "history": [
+            {
+                "date": "2025年12月6日",
+                "menu": "豚角煮カレー",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/味処 一_2025年12月6日.jpg"]
+            },
+            {
+                "date": "2026年4月29日",
+                "menu": "ミートカツスパゲッティ",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/味処 一_2026年4月29日.jpg"]
+            }
+        ]
+    },
+    "toriya": {
+        "name": "関根流 若鶏半身揚げ 二代目 とり家",
+        "city": "江別市",
+        "genre": ["から揚げ", "鳥料理"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/Gtex5ZebUEt7XV5h7",
+        "history": [
+            {
+                "date": "2025年5月5日",
+                "menu": "若鶏ザンギ(タレ付き)5個",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/関根流 若鶏半身揚げ 二代目 とり家_2025年5月5日.jpg"]
+            }
+        ]
+    },
+    "ammonite_restaurant": {
+        "name": "アンモナイトレストラン 野幌店",
+        "city": "江別市",
+        "genre": ["洋食", "レストラン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/uRiahcc65pFzfcaw6",
+        "history": [
+            {
+                "date": "2024年7月27日",
+                "menu": "★食べたメニュー名",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/アンモナイトレストラン 野幌店_2024年7月27日.jpg","images/江別市/アンモナイトレストラン 野幌店_2024年7月27日(1).jpg","images/江別市/アンモナイトレストラン 野幌店_2024年7月27日(2).jpg"]
+            },
+            {
+                "date": "2024年12月23日",
+                "menu": "★食べたメニュー名",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/アンモナイトレストラン 野幌店_2024年12月23日.jpg"]
+            },
+            {
+                "date": "2026年1月23日",
+                "menu": "★食べたメニュー名",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/アンモナイトレストラン 野幌店_2026年1月23日.jpg"]
+            }
+        ]
+    },
+    "hanaakari": {
+        "name": "花あかり",
+        "city": "江別市",
+        "genre": ["和食", "うどん", "甘味処"],
+        "tags":["ebetsu-son"],
+        "url": "https://hana-akari.info/",
+        "map": "https://maps.app.goo.gl/qC6Cgy7FAAGx8faq5",
+        "history": [
+            {
+                "date": "2026年1月21日",
+                "menu": "まぐろたたき丼セット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/花あかり_2026年1月21日.jpg"]
+            }
+        ]
+    },
+    "katuhei": {
+        "name": "かつ平",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "https://towheree.com/ebetsu/543970-katsuhei",
+        "map": "https://maps.app.goo.gl/jRx79HR8mEB4mRMH9",
+        "history": [
+            {
+                "date": "2025年5月6日",
+                "menu": "ワンタン麺",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/かつ平_2025年5月6日.jpg"]
+            }
+        ]
+    },
+    "yamaokaya_ebetsu": {
+        "name": "ラーメン山岡家 江別店",
+        "city": "江別市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "https://www.yamaokaya.com/shops/1161/",
+        "map": "https://maps.app.goo.gl/ox7UXUcmcVJpcTRw9",
+        "history": [
+            {
+                "date": "2025年11月2日",
+                "menu": "特製味噌ラーメン、チャーハン、特製ギョーザ6個",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/江別市/ラーメン山岡家 江別店_2025年11月2日.jpg"]
+            }
+        ]
+    },
+    "ginger_ramen_mizuno": {
+        "name": "生姜ラーメン みづの",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/8xMGLBoy5ysHss4n9",
+        "history": [
+        {
+            "date": "2026年9月15日",
+            "menu": "しょうが(大盛り)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/旭川市/生姜ラーメン みづの_2026年9月15日.jpg"]
+        }
+        ]
+    },
+    "korinbo": {
+        "name": "味噌拉麺 光林坊 本店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/qkA6cGGN7tErAdx8A",
+        "history": [
+            {
+                "date": "2026年8月14日",
+                "menu": "黒味噌生姜ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/味噌拉麺 光林坊 本店_2026年8月14日.jpg"]
+            }
+        ]
+    },
+    "heiwa": {
+        "name": "平和 旭川本店",
+        "city": "旭川市",
+        "genre": ["ラーメン","焼肉"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/sNey2oSemiagwd9DA",
+        "history": [
+            {
+                "date": "2026年8月10日",
+                "menu": "豚丼とラーメンレギュラーサイズセット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/平和 旭川本店_2026年8月10日.jpg"]
+            }
+        ]
+    },
+    "babyface_planets": {
+        "name": "ベビーフェイスプラネッツ 旭川忠和店",
+        "city": "旭川市",
+        "genre": ["洋食", "カフェ"],
+        "tags":"",
+        "url": "https://bfp-asahikawa.com/",
+        "map": "https://maps.app.goo.gl/VmnidwEqsJTrzE517",
+        "history": [
+            {
+                "date": "2026年8月9日",
+                "menu": "ベビーフェイスコース",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/ベビーフェイスプラネッツ 旭川忠和店_2026年8月9日.jpg","images/旭川市/ベビーフェイスプラネッツ 旭川忠和店_2026年8月9日(1).jpg","images/旭川市/ベビーフェイスプラネッツ 旭川忠和店_2026年8月9日(2).jpg"]
+            }
+        ]
+    },
+    "asahikawa_taisetsu_arena_shokudo": {
+        "name": "旭川大雪アリーナ食堂",
+        "city": "旭川市",
+        "genre": ["食堂", "定食"],
+        "tags":"",
+        "url": "https://www.asahikawa-dpc.co.jp/6Arena/arenadish.html",
+        "map": "https://maps.app.goo.gl/RxJn57E3T5icZwAG8",
+        "history": [
+            {
+                "date": "2026年8月1日",
+                "menu": "醬油ラーメン,カレーライス",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/旭川大雪アリーナ食堂_2026年8月1日.jpg"]
+            }
+        ]
+    },
+    "santouka": {
+        "name": "らーめん山頭火 旭川本店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "https://www.santouka.co.jp/shop-jp/hokkaido/area01-001",
+        "map": "https://maps.app.goo.gl/vz6R7UUi2Tux1Q4L6",
+        "history": [
+            {
+                "date": "2026年4月3日",
+                "menu": "塩ラーメン、ねぎめし",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/らーめん山頭火 旭川本店_2026年4月3日.jpg","images/旭川市/らーめん山頭火 旭川本店_2026年4月3日(1).jpg"]
+            }
+        ]
+    },
+    "aoba": {
+        "name": "旭川らぅめん青葉 本店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "http://www5b.biglobe.ne.jp/~aoba1948/",
+        "map": "https://maps.app.goo.gl/JTL9v7HZ7MFBU232A",
+        "history": [
+            {
+                "date": "2026年4月3日",
+                "menu": "正油らぅめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/旭川らぅめん青葉 本店_2026年4月3日.jpg"]
+            }
+        ]
+    },
+    "tenkin": {
+        "name": "らーめんや天金 四条店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "http://www.tenkin-asahikawa.jp/",
+        "map": "https://maps.app.goo.gl/s2Tut4W83c8iFKwQA",
+        "history": [
+            {
+                "date": "2026年4月2日",
+                "menu": "正油ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/らーめんや天金 四条店_2026年4月2日.jpg"]
+            },
+            {
+                "date": "2024年2月12日",
+                "menu": "正油ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/らーめんや天金 四条店_2024年2月12日.jpg"]
+            }
+        ]
+    },
+    "jiyuuken": {
+        "name": "自由軒",
+        "city": "旭川市",
+        "genre": ["定食", "洋食"],
+        "tags":["asahikawa-son"],
+        "url": "http://guknak.jimdofree.com/",
+        "map": "https://maps.app.goo.gl/QojuVa32NteAmr277",
+        "history": [
+            {
+                "date": "2026年3月31日",
+                "menu": "肉ライス(ポークチャップ)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/自由軒_2026年3月31日.jpg"]
+            }
+        ]
+    },
+    "daidaya": {
+        "name": "らーめん橙ヤ 旭川本店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "https://ramen-daidaiya.com/",
+        "map": "https://maps.app.goo.gl/yRVZQbemwafGncHw6",
+        "history": [
+            {
+                "date": "2026年2月27日",
+                "menu": "こく旨しょうゆ",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/らーめん橙ヤ 旭川本店_2026年2月27日.jpg"]
+            }
+        ]
+    },
+    "himawari": {
+        "name": "ラーメン専門 ひまわり",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "http://www.moru-men.com/",
+        "map": "https://maps.app.goo.gl/pK3vJ9q6UViZLUX29",
+        "history": [
+            {
+                "date": "2026年2月27日",
+                "menu": "モルメン正油",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/ラーメン専門 ひまわり_2026年2月27日.jpg"]
+            }
+        ]
+    },
+    "sugawara": {
+        "name": "ラーメン すがわら 本店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "https://enfood.jp/sugawara/?page_id=1045",
+        "map": "https://maps.app.goo.gl/AiXUVve7P7C9dseHA",
+        "history": [
+            {
+                "date": "2026年2月22日",
+                "menu": "塩ラーメン、ミニスパイシーチャーハン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/ラーメン すがわら 本店_2026年2月22日.jpg"]
+            }
+        ]
+    },
+    "center_shokudo": {
+        "name": "センター 食堂",
+        "city": "旭川市",
+        "genre": ["定食", "食堂"],
+        "tags":"",
+        "url": "https://asahikawa-mokkocenter.com/?p=1117",
+        "map": "https://maps.app.goo.gl/BpjJCeZyaUVQGURu9",
+        "history": [
+            {
+                "date": "2026年2月16日",
+                "menu": "正油ラーメン、ミニザンギ丼",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/センター 食堂_2026年2月16日.jpg"]
+            }
+        ]
+    },
+    "kura": {
+        "name": "らーめん蔵",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/qxQPDpPU7ETky93h9",
+        "history": [
+            {
+                "date": "2026年2月11日",
+                "menu": "とくだ値セット(しょうゆ、ねぎバターめし)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/らーめん蔵_2026年2月11日.jpg"]
+            }
+        ]
+    },
+    "hachiya": {
+        "name": "蜂屋 五条創業店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/2DPzGsyAG6VUw8U79",
+        "history": [
+            {
+                "date": "2026年1月31日",
+                "menu": "しょうゆラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/蜂屋 五条創業店_2026年1月31日.jpg"]
+            }
+        ]
+    },
+    "hizou": {
+        "name": "麺屋秘蔵",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "#",
+        "history": [
+            {
+                "date": "2026年1月31日",
+                "menu": "柚子ネギしお",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/麺屋秘蔵_2026年1月31日.jpg"]
+            }
+        ]
+    },
+    "ichizou": {
+        "name": "一蔵 本店",
+        "city": "旭川市",
+        "genre": ["ラーメン"],
+        "tags":["asahikawa-ramen"],
+        "url": "http://www.ichi-kura.co.jp/",
+        "map": "https://maps.app.goo.gl/R7e83zSo2qxjzogD9",
+        "history": [
+            {
+                "date": "2026年1月11日",
+                "menu": "ネギラーメン(しょうゆ)、チャーマヨ丼",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/一蔵 本店_2026年1月11日.jpg"]
+            }
+        ]
+    },
+    "fuusha": {
+        "name": "ラーメン＆カフェ風沙-ふうしゃ-",
+        "city": "旭川市",
+        "genre": ["ラーメン", "カフェ"],
+        "tags":"",
+        "url": "https://japoncompany.business/asahikawa/544109--",
+        "map": "https://maps.app.goo.gl/VvWKPk3KcyBDDqWF7",
+        "history": [
+            {
+                "date": "2025年8月18日",
+                "menu": "岩塩、ミニチャーマヨ丼",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/旭川市/ラーメン＆カフェ風沙-ふうしゃ-_2025年8月18日.jpg"]
+            }
+        ]
+    },
+    "shinasoba_ibu": {
+        "name": "支那そば 鋳",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/z7YAsb3ihvL3oTdt9",
+        "history": [
+            {
+                "date": "2026年10月24日",
+                "menu": "地鶏らぁ麺艶塩",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/支那そば 鋳_2026年10月24日.jpg"]
+            }
+        ]
+    },
+    "menya_ozawa": {
+        "name": "麺屋 おざわ",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://ozawa.360cvt.com/",
+        "map": "https://maps.app.goo.gl/ZLiJUwfE4NUTTpWp8",
+        "history": [
+            {
+                "date": "2026年10月24日",
+                "menu": "みそらーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/麺屋 おざわ_2026年10月24日.jpg"]
+            }
+        ]
+    },
+    "gyutaro": {
+        "name": "定食の店 牛太郎",
+        "city": "札幌市",
+        "genre": ["定食"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/hGudkJKqXTqgF8DC7",
+        "history": [
+        {
+            "date": "2026年10月4日",
+            "menu": "カットステーキ定食",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/牛太郎_2026年10月4日.jpg"]
+        }
+        ]
+    },
+    "yuzuki": {
+        "name": "優月",
+        "city": "札幌市",
+        "genre": ["カレー","ラーメン"],
+        "url": "https://ramenyuzuki.wixsite.com/my-site-1",
+        "map": "https://maps.app.goo.gl/6mJfX5R83mHGbVoR7",
+        "history": [
+        {
+            "date": "2026年9月27日",
+            "menu": "味噌らーめんセット(ラーメン大盛り)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/優月_2026年9月27日.jpg","images/札幌市/優月_2026年9月27日(1).jpg"]
+        }
+        ]
+    },
+    "zangi_honpo_sapporo_ekikitaguchi": {
+        "name": "札幌ザンギ本舗 札幌駅北口店",
+        "city": "札幌市",
+        "genre": ["ザンギ", "居酒屋", "唐揚げ"],
+        "url": "https://zangihonpo-k.com/?utm_source=google&utm_medium=map&utm_campaign=info",
+        "map": "https://maps.app.goo.gl/SLS2HrA77814xofM9",
+        "history": [
+        {
+            "date": "2026年9月23日",
+            "menu": "ザンギ定食&煮干し中華そば",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/札幌ザンギ本舗 札幌駅北口店_2026年9月23日.jpg"]
+        }
+        ]
+    },
+    "chouchou_wolf_shiroishi": {
+        "name": "歯のいらないハンバーグ シュシュウルフ札幌白石店",
+        "city": "札幌市",
+        "genre": ["ハンバーグ", "ステーキ"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/31S19fDt6c1fmf1D8",
+        "history": [
+        {
+            "date": "2026年9月22日",
+            "menu": "炙りチーズのデミグラスハンバーグ(ライス・サラダセット)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/歯のいらないハンバーグ シュシュウルフ札幌白石店_2026年9月22日.jpg"]
+        }
+        ]
+    },
+
+    "teraya_sapporo": {
+        "name": "手打うどん 寺屋",
+        "city": "札幌市",
+        "genre": ["うどん"],
+        "url": "http://www.udonteraya.com/index.html",
+        "map": "https://maps.app.goo.gl/AJcLnUhE75VHMCnb9",
+        "history": [
+        {
+            "date": "2026年9月3日",
+            "menu": "ごぼう天肉汁つけめん",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/手打うどん 寺屋_2026年9月3日.jpg"]
+        }
+        ]
+    },
+    "taoka_sapporo_ekikitaguchi": {
+        "name": "たおか 札幌駅北口店",
+        "city": "札幌市",
+        "genre": ["ラーメン", "油そば"],
+        "url": "http://www.aburasoba.biz/",
+        "map": "https://maps.app.goo.gl/oNJMxbr83R91oVfT8",
+        "history": [
+        {
+            "date": "2026年9月2日",
+            "menu": "並盛",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/たおか 札幌駅北口店_2026年9月2日.jpg"]
+        }
+        ]
+    },
+    "shirakabasanso_makomanai": {
+        "name": "麺処 白樺山荘 真駒内本店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "http://www.shirakaba-sansou.jp/",
+        "map": "https://maps.app.goo.gl/t5kzAstoZqnmKbBFA",
+        "history": [
+        {
+            "date": "2026年9月2日",
+            "menu": "味噌らーめん",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/麺処 白樺山荘 真駒内本店_2026年9月2日.jpg"]
+        }
+        ]
+    },
+    "yukijirushi_parlor_honten": {
+        "name": "雪印パーラー 札幌本店 ソフトクリーム・パフェ",
+        "city": "札幌市",
+        "genre": ["カフェ", "スイーツ", "パフェ"],
+        "url": "https://www.snowbrand-p.co.jp/",
+        "map": "https://maps.app.goo.gl/GD28WkAtesdXd2G96",
+        "history": [
+        {
+            "date": "2026年8月29日",
+            "menu": "スノーロイヤルストロベリーパフェ",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/雪印パーラー 札幌本店 ソフトクリーム・パフェ_2026年8月29日.jpg"]
+        }
+        ]
+    },
+    "kiirotoshiro": {
+        "name": "ルーカレーとシチューの店 キイロトシロ",
+        "city": "札幌市",
+        "genre": ["カレー", "シチュー"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/CLL5nE2tDuQq2Mxr7",
+        "history": [
+        {
+            "date": "2026年8月29日",
+            "menu": "ゴロゴロチキンカレー(200G,オリジナルカレー,並,並)",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/ルーカレーとシチューの店 キイロトシロ_2026年8月29日.jpg"]
+        }
+        ]
+    },
+    "kozuki": {
+        "name": "幸月 (こうづき)",
+        "city": "札幌市",
+        "genre": ["中華料理"],
+        "url": "",
+        "map": "https://maps.app.goo.gl/9NeBr9cpk2NeC2CR7",
+        "history": [
+        {
+            "date": "2026年8月23日",
+            "menu": "幸月炒飯(ハーフ)&幸月ザンギのセット",
+            "comment": "★その時の感想・思い出",
+            "photos": ["images/札幌市/幸月 (こうづき)_2026年8月23日.jpg"]
+        }
+        ]
+    },
+    "hotei_akarenga": {
+        "name": "中国料理 布袋 赤れんがテラス店",
+        "city": "札幌市",
+        "genre": ["中華料理"],
+        "url": "https://zangihoteigroup.com/other2/",
+        "map": "https://maps.app.goo.gl/xjxhisJydUUUYe4V7",
+        "history": [
+            {
+                "date": "2026年8月19日",
+                "menu": "B定食",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/中国料理 布袋 赤れんがテラス店_2026年8月19日.jpg"]
+            }
+        ]
+    },
+    "umekichi": {
+        "name": "和だしらぁめん うめきち",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/9B41syjhVm7XUFPTA",
+        "history": [
+            {
+                "date": "2026年8月18日",
+                "menu": "煮干しらぁめん(大盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/和だしらぁめん うめきち_2026年8月18日.jpg"]
+            }
+        ]
+    },
+    "shishio": {
+        "name": "らーめん獅子王",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://retty.me/area/PRE01/ARE164/SUB43804/100000868505/",
+        "map": "https://maps.app.goo.gl/oTbURMZT7HXd9vvg9",
+        "history": [
+            {
+                "date": "2026年8月18日",
+                "menu": "獅子王みそデラックス",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/らーめん獅子王_2026年8月18日.jpg"]
+            }
+        ]
+    },
+    "ru_hashimoto_poletown": {
+        "name": "ルーハシモト ポールタウン店",
+        "city": "札幌市",
+        "genre": ["カレー", "洋食"],
+        "url": "https://j-curry.jp/",
+        "map": "https://maps.app.goo.gl/xtxqJuZTGi4kwfgQ7",
+        "history": [
+            {
+                "date": "2026年7月30日",
+                "menu": "ビーフカレー(チーズ)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/ルーハシモト ポールタウン店_2026年7月30日.jpg"]
+            },
+            {
+                "date": "2026年10月4日",
+                "menu": "ビーフカレー(豚しゃぶ、大盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/ルーハシモト ポールタウン店_2026年10月4日.jpg"]
+            }
+        ]
+    },
+    "ganso_sapporo_ramen_mogura": {
+        "name": "元祖札幌ラーメン もぐら",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/uuVaALFQ4yQjcBsL8",
+        "history": [
+            {
+                "date": "2026年7月26日",
+                "menu": "味噌ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/元祖札幌ラーメン もぐら_2026年07月26日.jpg"]
+            }
+        ]
+    },
+    "ookami_soup": {
+        "name": "狼スープ",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "http://www.ohkami-soup.net/",
+        "map": "https://maps.app.goo.gl/RdEyYMrMXNRfstH29",
+        "history": [
+            {
+                "date": "2026年7月26日",
+                "menu": "味噌らーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/狼スープ_2026年07月26日.jpg"]
+            }
+        ]
+    },
+    "shinmen_hodaka": {
+        "name": "眞麺 穂高",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/fJbPCYWkeh5JEFEKA",
+        "history": [
+            {
+                "date": "2026年7月25日",
+                "menu": "味噌ラーメン,おろししょうが",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/眞麺 穂高_2026年7月25日.jpg"]
+            }
+        ]
+    },
+    "yamamoto_hamburg": {
+        "name": "山本のハンバーグ 札幌miredo店",
+        "city": "札幌市",
+        "genre": ["ハンバーグ", "洋食"],
+        "url": "https://stay-dream.co.jp/brand/#brand02",
+        "map": "https://maps.app.goo.gl/bnrKunwGpsQr5b7R7",
+        "history": [
+            {
+                "date": "2026年7月16日",
+                "menu": "山本のハンバーグ(サラダセット)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/山本のハンバーグ 札幌miredo店_2026月7月16日.jpg"]
+            }
+        ]
+    },
+    "kashu": {
+        "name": "中華料理香州",
+        "city": "札幌市",
+        "genre": ["中華料理"],
+        "url": "http://kasiu.jp/",
+        "map": "https://maps.app.goo.gl/85aSfHSEKbGqzfzbA",
+        "history": [
+            {
+                "date": "2026年7月19日",
+                "menu": "ハムチャーハン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/中華料理香州_2026年7月19日.jpg"]
+            }
+        ]
+    },
+    "sora": {
+        "name": "らーめん空 札幌ススキノ店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/7Lvx6YU1jfvTfBCw8",
+        "history": [
+            {
+                "date": "2026年7月19日",
+                "menu": "チャーシュー味噌、餃子",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/らーめん空 札幌ススキノ店_2026年7月19日.jpg"]
+            }
+        ]
+    },
+    "dandadan": {
+        "name": "肉汁餃子のダンダダン 札幌店",
+        "city": "札幌市",
+        "genre": ["餃子", "居酒屋"],
+        "url": "https://www.dandadan.jp/",
+        "map": "https://maps.app.goo.gl/6goajD13Z1aZ4L7d7",
+        "history": [
+            {
+                "date": "2026年7月20日",
+                "menu": "焼餃子&チャーシュー定食",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/肉汁餃子のダンダダン 札幌店_2026年07月20日.jpg"]
+            }
+        ]
+    },
+    "kaminariken": {
+        "name": "つけ麺 カミナリ軒",
+        "city": "札幌市",
+        "genre": ["ラーメン", "つけ麺"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/QRnpVMcgpr1rLdAb9",
+        "history": [
+            {
+                "date": "2026年7月12日",
+                "menu": "濃厚魚介豚骨つけ麺(並盛)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/つけ麺 カミナリ軒_2026年7月12日.jpg"]
+            }
+        ]
+    },
+    "ezoshokudo": {
+        "name": "札幌ラーメン ゑぞ食堂",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/QYgrMxWNnHBotGDL8",
+        "history": [
+            {
+                "date": "2026年7月12日",
+                "menu": "味噌ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌ラーメン ゑぞ食堂_2026年7月12日.jpg"]
+            }
+        ]
+    },
+    "nishiki": {
+        "name": "濃熟鶏白湯 らーめん錦 札幌店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://www.nishiki-diner-inc.com/nishiki-sapporo",
+        "map": "https://maps.app.goo.gl/F1Uf5iDfC5QmkMbq5",
+        "history": [
+            {
+                "date": "2026年7月11日",
+                "menu": "醤油らーめん(味玉トッピング),チャーシュー丼",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/濃熟鶏白湯らーめん錦札幌店_2026年7月11日.jpg","images/札幌市/濃熟鶏白湯らーめん錦札幌店_2026年7月11日(1).jpg"]
+            },
+            {
+                "date": "2026年8月23日",
+                "menu": "塩らーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/濃熟鶏白湯らーめん錦札幌店_2026年8月23日.jpg"]
+            }
+        ]
+    },
+    "enjin": {
+        "name": "札幌 炎神",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/1883EheFfNZhV7a27",
+        "history": [
+            {
+                "date": "2026年7月9日",
+                "menu": "芳醇味噌ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌 炎神_2026年7月9日.jpg"]
+            },
+            {
+                "date": "2026年7月30日",
+                "menu": "芳醇味噌炎神らーめん,ミニ豚丼",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌 炎神_2026年7月30日.jpg","images/札幌市/札幌 炎神_2026年7月30日(1).jpg"]
+            }
+        ]
+    },
+    "kichirin": {
+        "name": "らーめんきちりん 新琴似店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/vNaQGL4W5fhD8NTA9",
+        "history": [
+            {
+                "date": "2026年7月4日",
+                "menu": "チャーハンセット(塩)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/らーめんきちりん 新琴似店_2026年7月4日.jpg"]
+            }
+        ]
+    },
+    "hayatemaru": {
+        "name": "北海道ラーメン 追風丸 本店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "http://www.hayatemaru.com/",
+        "map": "https://maps.app.goo.gl/MD7k3G1P57LWxvog6",
+        "history": [
+            {
+                "date": "2026年6月13日",
+                "menu": "白味噌らーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/北海道ラーメン 追風丸 本店_2026年6月13日.jpg"]
+            }
+        ]
+    },
+    "hachinoki": {
+        "name": "八乃木",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/iUyiJQoUoUiwQ3cA8",
+        "history": [
+            {
+                "date": "2026年6月13日",
+                "menu": "みそらーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/八乃木_2026年6月13日.jpg"]
+            }
+        ]
+    },
+    "ranran": {
+        "name": "焼そばランラン",
+        "city": "札幌市",
+        "genre": ["焼きそば"],
+        "url": "http://yakisobarunrun.web.fc2.com/",
+        "map": "https://maps.app.goo.gl/a6Apscrqc1F2LrsNA",
+        "history": [
+            {
+                "date": "★2026年6月13日",
+                "menu": "ジンギスカン焼きそば(中盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/焼そばランラン_2026年6月13日.jpg"]
+            }
+        ]
+    },
+    "masuda_udon": {
+        "name": "増田うどん",
+        "city": "札幌市",
+        "genre": ["うどん"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/R65yRq7D87gzJSVm7",
+        "history": [
+            {
+                "date": "2026年6月7日",
+                "menu": "増田肉うどん(ごぼ天トッピング)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/増田うどん_2026年6月7日.jpg"]
+            }
+        ]
+    },
+    "fujiya": {
+        "name": "札幌Fuji屋",
+        "city": "札幌市",
+        "genre": ["ラーメン", "つけ麺"],
+        "url": "https://fujiya-sapporo.com/sapporo_fujiya/",
+        "map": "https://maps.app.goo.gl/QWxdt1oFYTrN4bJGA",
+        "history": [
+            {
+                "date": "2026年6月6日",
+                "menu": "味噌ラーメン(魚介豚骨背脂)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌Fuji屋_2026年6月6日.jpg"]
+            }
+        ]
+    },
+    "toritama_farm": {
+        "name": "ラーメンとりたまファーム",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://nagamitsufarm.com/toritama-farm/",
+        "map": "https://maps.app.goo.gl/NgEn7o7y2UJ2sBHn9",
+        "history": [
+            {
+                "date": "2026年5月30日",
+                "menu": "鶏白湯(ワンタン入り)、からあげ2個とライスセット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/ラーメンとりたまファーム_2026年5月30日.jpg"]
+            }
+        ]
+    },
+    "touhoumeijuhanten": {
+        "name": "東方明珠飯店",
+        "city": "札幌市",
+        "genre": ["中華料理"],
+        "url": "https://s.tabelog.com/hokkaido/A0101/A010204/1071106/",
+        "map": "https://maps.app.goo.gl/gYcGPjm8Msjvbu16A",
+        "history": [
+            {
+                "date": "2026年5月16日",
+                "menu": "からあげ(8個を4人で分けて2個)、チャーシュー炒飯",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/東方明珠飯店_2026年5月16日.jpg","images/札幌市/東方明珠飯店_2026年5月16日(1).jpg","images/札幌市/東方明珠飯店_2026年5月16日(2).jpg"]
+            }
+        ]
+    },
+    "tora": {
+        "name": "らーめん虎",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/VkQhp3EervBNpUkE8",
+        "history": [
+            {
+                "date": "2026年5月16日",
+                "menu": "琥珀(魚介)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/らーめん虎_2026年5月16日.jpg"]
+            }
+        ]
+    },
+    "furaido_susukino": {
+        "name": "札幌つけ麺 札幌ラーメン 風来堂 すすきの店",
+        "city": "札幌市",
+        "genre": ["ラーメン", "つけ麺"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/uxbZTCXPbc1pFZsJA",
+        "history": [
+            {
+                "date": "2026年5月10日",
+                "menu": "味噌ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌つけ麺 札幌ラーメン 風来堂 すすきの店_2026年5月10日.jpg"]
+            }
+        ]
+    },
+    "yukimura_cocono": {
+        "name": "札幌真麺処 幸村 ココノススキノ店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://yukimuraramen.jimdofree.com/",
+        "map": "https://maps.app.goo.gl/Yy7eJha9pfUCeo2Y9",
+        "history": [
+            {
+                "date": "2026年5月10日",
+                "menu": "味噌ラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌真麺処 幸村 ココノススキノ店_2026年5月10日.jpg"]
+            }
+        ]
+    },
+    "men_in_ezo": {
+        "name": "MEN in EZO SUSUKINO",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/KfDQ9PsARsfakrqT8",
+        "history": [
+            {
+                "date": "2026年5月6日",
+                "menu": "油そば",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/MEN in EZO SUSUKINO_2026年5月6日.jpg"]
+            }
+        ]
+    },
+    "hien_cocono": {
+        "name": "我流麺舞 飛燕 ココノススキノ店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/ZpGKYniVHY1Nfett6",
+        "history": [
+            {
+                "date": "2026年5月6日",
+                "menu": "札幌ラーメン(味噌)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/我流麺舞 飛燕 ココノススキノ店_2026年5月6日.jpg"]
+            }
+        ]
+    },
+    "takezo_susukino": {
+        "name": "麺屋 竹蔵-TAKEZO- すすきの店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/6jUuDgKBMKk7sEsn7",
+        "history": [
+            {
+                "date": "2026年4月29日",
+                "menu": "札幌味噌",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/麺屋 竹蔵-TAKEZO- すすきの店_2026年4月29日.jpg"]
+            }
+        ]
+    },
+    "cityhall_shokudo": {
+        "name": "札幌市役所地下食堂",
+        "city": "札幌市",
+        "genre": ["定食", "食堂"],
+        "url": "http://xn--ghqt6tbsad0qtkah4dhwieyltx6i.jp/",
+        "map": "https://maps.app.goo.gl/2k96H1xYF1T8phgv5",
+        "history": [
+            {
+                "date": "2026年1月30日",
+                "menu": "豚汁セット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌市役所地下食堂_2026年1月30日.jpg"]
+            }
+        ]
+    },
+    "tokyogojuban_odori": {
+        "name": "東京五十番 大通西1丁目店",
+        "city": "札幌市",
+        "genre": ["中華料理"],
+        "url": "http://www.t50b.shop/",
+        "map": "https://maps.app.goo.gl/MYhWWsdWv7vctVii6",
+        "history": [
+            {
+                "date": "2026年1月29日",
+                "menu": "正油ラーメンセット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/東京五十番 大通西1丁目店_2026年1月29日.jpg"]
+            }
+        ]
+    },
+    "kiraitou": {
+        "name": "喜来登",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/QBgpPBtZGm5vUSAYA",
+        "history": [
+            {
+                "date": "2026年1月27日",
+                "menu": "みそラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/喜来登_2026年1月27日.jpg"]
+            },
+            {
+                "date": "2026年9月1日",
+                "menu": "しょうゆラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/喜来登_2026年9月1日.jpg"]
+            }
+        ]
+    },
+    "kifu_susukino": {
+        "name": "札幌らーめん 輝風 すすきの店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://tabelog.com/hokkaido/A0101/A010103/1060348/",
+        "map": "https://maps.app.goo.gl/nfG338o9jL8wmu3p8",
+        "history": [
+            {
+                "date": "2026年1月27日",
+                "menu": "元祖味噌",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/札幌らーめん 輝風 すすきの店_2026年1月27日.jpg"]
+            }
+        ]
+    },
+    "ooban_hokunou": {
+        "name": "そば処大番 北農店",
+        "city": "札幌市",
+        "genre": ["そば"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/MyYGdVCxgwhRbizq5",
+        "history": [
+            {
+                "date": "2026年1月24日",
+                "menu": "かしわそば(中盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/そば処大番 北農店_2026年1月24日.jpg"]
+            },
+            {
+                "date": "2026年4月7日",
+                "menu": "たぬきそば(大盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/そば処大番 北農店_2026年4月7日.jpg"]
+            },
+            {
+                "date": "2026年8月6日",
+                "menu": "冷やしごぼう天そば(中盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/そば処大番 北農店_2026年8月6日.jpg"]
+            },
+            {
+                "date": "2026年8月21日",
+                "menu": "冷やしかき揚げ天そば(中盛り)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/そば処大番 北農店_2026年8月21日.jpg"]
+            }
+        ]
+    },
+    "colombo": {
+        "name": "カリーハウス コロンボ",
+        "city": "札幌市",
+        "genre": ["カレー"],
+        "url": "http://www.colombo1973.com/",
+        "map": "https://maps.app.goo.gl/PrUDYhCD3xm6RCEx7",
+        "history": [
+            {
+                "date": "2026年1月21日",
+                "menu": "カツカレー(ビッグ)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/カリーハウス コロンボ_2026年1月21日.jpg"]
+            }
+        ]
+    },
+    "yukikaze_susukino": {
+        "name": "麺屋雪風 すすきの本店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "http://menyayukikaze.com/shop/",
+        "map": "https://maps.app.goo.gl/EFt7JTzq8DMcpzPT6",
+        "history": [
+            {
+                "date": "2025年12月21日",
+                "menu": "濃厚味噌らーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/麺屋雪風 すすきの本店_2025年12月21日.jpg"]
+            }
+        ]
+    },
+    "yoshiyama_honten": {
+        "name": "らーめん吉山商店 本店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "https://maps.app.goo.gl/gtuqFjaytXHFy2ww8",
+        "map": "https://www.yosiyama-shouten.com/",
+        "history": [
+            {
+                "date": "2025年12月21日",
+                "menu": "焙煎ごまみそらーめん",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/らーめん吉山商店 本店_2025年12月21日.jpg"]
+            }
+        ]
+    },
+    "sumire_nakanoshima": {
+        "name": "すみれ 中の島本店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "http://www.sumireya.com/",
+        "map": "https://maps.app.goo.gl/N9WNGNgr9HW5Ei4X7",
+        "history": [
+            {
+                "date": "2025年11月29日",
+                "menu": "味噌ラーメン、チャーハン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/すみれ 中の島本店_2025年11月29日.jpg"]
+            }
+        ]
+    },
+    "azuma": {
+        "name": "味処あずま",
+        "city": "札幌市",
+        "genre": ["定食", "食堂"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/75g8ASujjvktNDDF6",
+        "history": [
+            {
+                "date": "2025年12月6日",
+                "menu": "ミニ豚丼セット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/味処あずま_2025年12月6日.jpg"]
+            },
+            {
+                "date": "2025年12月24日",
+                "menu": "ミニ豚丼セット(肉うどん)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/味処あずま_2025年12月24日.jpg"]
+            },
+            {
+                "date": "2026年4月29日",
+                "menu": "豚丼(うどんセット)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/味処あずま_2026年4月29日.jpg"]
+            }
+        ]
+    },
+    "yamaokaya_tanukikoji4": {
+        "name": "ラーメン山岡家 狸小路4丁目店",
+        "city": "札幌市",
+        "genre": ["ラーメン"],
+        "url": "http://www.yamaokaya.com/shops/1140/",
+        "map": "https://maps.app.goo.gl/2AdmPVbMSyjCETW2A",
+        "history": [
+            {
+                "date": "2025年11月28日",
+                "menu": "プレミアム塩とんこつラーメン",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/ラーメン山岡家 狸小路4丁目店_2025年11月28日.jpg"]
+            }
+        ]
+    },
+    "wantuchi_sapporo": {
+        "name": "万豚記 札幌店",
+        "city": "札幌市",
+        "genre": ["中華料理", "ラーメン"],
+        "url": "https://kiwa-group.co.jp/wanzhuji_sapporo/",
+        "map": "https://maps.app.goo.gl/bcuqjFhHAT6itbTP8",
+        "history": [
+            {
+                "date": "2025年11月15日",
+                "menu": "豚肉青菜炒飯セット(醤油)",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/万豚記 札幌店_2025年11月15日.jpg","images/札幌市/万豚記 札幌店_2025年11月15日(1).jpg"]
+            },
+            {
+                "date": "2025年11月22日",
+                "menu": "大餃子定食",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/万豚記 札幌店_2025年11月22日.jpg"]
+            },
+            {
+                "date": "2026年5月23日",
+                "menu": "担々麵セット",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/万豚記 札幌店_2026年5月23日.jpg"]
+            },
+            {
+                "date": "2026年10月18日",
+                "menu": "豚肉青菜炒飯セット(塩)、大餃子4個",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/万豚記 札幌店_2026年10月18日.jpg","images/札幌市/万豚記 札幌店_2026年10月18日(1).jpg"]
+            }
+        ]
+    },
+    "lale": {
+        "name": "トルコカフェ&レストラン LALE",
+        "city": "札幌市",
+        "genre": ["トルコ料理", "カフェ"],
+        "tags":"",
+        "url": "",
+        "map": "https://maps.app.goo.gl/896aMXu8jDvG2wSN6",
+        "history": [
+            {
+                "date": "2025年8月5日",
+                "menu": "チキンケバブ",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/トルコカフェ&レストラン LALE_2025年8月5日.jpg"]
+            }
+        ]
+    }
+}
