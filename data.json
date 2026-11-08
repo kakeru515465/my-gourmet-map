@@ -666,6 +666,22 @@
             }
         ]
     },
+    "tsutsumibito": {
+        "name": "餃子と中華 つつみ人",
+        "city": "札幌市",
+        "genre": ["中華", "餃子"],
+        "tags": "",
+        "url": "http://tsutsumibito.com/",
+        "map": "https://maps.app.goo.gl/mezj627d1etmXQnN6",
+        "history": [
+            {
+                "date": "2026年11月8日",
+                "menu": "角煮炒飯、からあげ2ケ",
+                "comment": "★その時の感想・思い出",
+                "photos": ["images/札幌市/餃子と中華 つつみ人_2026年11月8日.jpg"]
+            }
+        ]
+    },
     "little_spoon_hokudai_byoinmae": {
         "name": "リトルスプーン 北大病院前店",
         "city": "札幌市",
