@@ -4,7 +4,8 @@ body {
     background-color: #f0f2f5;
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 15px;
+    -webkit-text-size-adjust: 100%;
 }
 
 .container {
@@ -14,12 +15,18 @@ body {
 
 header {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0 20px 0;
 }
 
 header h1 {
     margin: 0;
     color: #2c3e50;
+    font-size: 1.6rem;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 /* --- 地図エリア --- */
@@ -27,16 +34,22 @@ header h1 {
     background-color: #e3f2fd;
     border: 2px dashed #90caf9;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+}
+
+.map-container h3 {
+    font-size: 1rem;
+    margin-top: 0;
 }
 
 .area-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
 }
 
 .btn-area {
@@ -49,49 +62,58 @@ header h1 {
     font-weight: bold;
     text-decoration: none;
     transition: background 0.3s;
+    font-size: 0.95rem;
 }
 
 .btn-area:hover {
     background-color: #0056b3;
 }
 
+/* --- フィルターコンテナ --- */
+.filter-container {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+
+.filter-container h3 {
+    font-size: 0.95rem;
+    margin: 0 0 10px 0;
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 /* --- エリア別お店リスト --- */
 .area-section {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .section-title {
     border-left: 5px solid #007bff;
     padding-left: 10px;
-    margin-top: 40px;
+    margin-top: 30px;
     color: #2c3e50;
+    font-size: 1.2rem;
 }
 
 .shop-grid {
-    /* 既存の設定から変更：grid から flex に変更して横並びにします */
     display: flex;
-    
-    /* 削除またはコメントアウト：横スクロールにするため、縦方向の自動折り返し（grid-template）は不要になります */
-    /* grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); */
-    
-    /* 追加：横方向にはみ出た場合にスクロールバーを自動で出し、子要素の自動改行を防ぎます */
     overflow-x: auto;
     white-space: nowrap;
-    
-    /* 既存のままでOK：間隔と上マージン */
-    gap: 20px;
-    margin-top: 20px;
-    
-    /* 追加：カードの影が削れないように上下に少しだけ余白を作り、スマホでのスクロールを滑らかにします */
-    padding: 10px 5px;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 5px 2px 15px 2px;
     -webkit-overflow-scrolling: touch; 
-    
-    /* 追加：PCでの見た目をすっきりさせるため、スクロールバーを非表示にする設定 */
-    scrollbar-width: none;          /* Firefox用 */
-    -ms-overflow-style: none;       /* IE/Edge用 */
+    scrollbar-width: none;          
+    -ms-overflow-style: none;       
 }
 
-/* 追加：Chrome, Safari用のスクロールバー非表示設定 */
 .shop-grid::-webkit-scrollbar {
     display: none;
 }
@@ -104,14 +126,12 @@ header h1 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    
-    /* 追加：最重要！横並び（flex）になってもカードが細く潰れないように、横幅を280pxにガチッと固定します */
-    flex: 0 0 280px;
+    flex: 0 0 260px;
 }
 
 .shop-image-placeholder {
     width: 100%;
-    height: 180px;
+    height: 160px;
     background-color: #ddd;
     display: flex;
     align-items: center;
@@ -121,14 +141,15 @@ header h1 {
 }
 
 .shop-info {
-    padding: 15px;
+    padding: 12px;
 }
 
 .shop-name {
-    margin: 0 0 10px 0;
-    font-size: 18px;
+    margin: 0 0 8px 0;
+    font-size: 16px;
     color: #007bff;
     cursor: pointer;
+    white-space: normal; /* スマホで店名が長い場合に折り返す */
 }
 
 .shop-name:hover {
@@ -136,53 +157,41 @@ header h1 {
     color: #0056b3;
 }
 
-.shop-desc {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.4;
+.shop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
 }
 
-.btn-link {
-    display: inline-block;
-    background-color: #fff;
-    color: #007bff;
-    border: 1px solid #007bff;
-    padding: 6px 12px;
+.tag {
+    font-size: 11px;
+    background: #f0f2f5;
+    padding: 2px 6px;
     border-radius: 4px;
-    text-decoration: none;
-    font-size: 13px;
-    text-align: center;
-    transition: all 0.3s;
+    color: #555;
 }
 
-.btn-link:hover {
-    background-color: #007bff;
-    color: white;
-}
-
-/* --- 📖 美食図鑑パネル（左右分割レイアウト） --- */
-.zukan-section {
-    margin-top: 50px;
-    margin-bottom: 50px;
+/* --- 📖 美食図鑑パネル（レスポンシブ対応：PCは左右、スマホは縦並び） --- */
+.zukan-page-container {
+    margin-top: 10px;
+    padding-bottom: 20px;
 }
 
 .zukan-panel {
-    display: none; /* 最初は非表示。クリックされたらJavaScriptで flex にする */
+    display: flex;
     background: white;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     overflow: hidden;
     border: 2px solid #34495e;
-    min-height: 500px;
 }
 
 /* 👈 図鑑・左側 */
 .zukan-left {
     width: 35%;
     background-color: #f8f9fa;
-    padding: 30px;
-    border-right: 2px solid #eed; /* タイポ修正しました！ */
+    padding: 20px;
+    border-right: 2px solid #e0e0e0;
     box-sizing: border-box;
 }
 
@@ -196,15 +205,23 @@ header h1 {
 }
 
 .zukan-shop-name {
-    margin: 15px 0;
+    margin: 12px 0;
     color: #2c3e50;
-    font-size: 22px;
+    font-size: 1.3rem;
+    word-break: break-all;
 }
 
 .zukan-meta {
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.5;
+}
+
+.zukan-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .official-link-btn {
@@ -215,9 +232,9 @@ header h1 {
     text-decoration: none;
     padding: 10px;
     border-radius: 6px;
-    margin-top: 30px;
-    font-size: 14px;
+    font-size: 13px;
     transition: background 0.2s;
+    box-sizing: border-box;
 }
 
 .official-link-btn:hover {
@@ -227,10 +244,10 @@ header h1 {
 /* 👉 図鑑・右側（スクロールエリア） */
 .zukan-right {
     width: 65%;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
-    max-height: 650px;
+    max-height: 80vh;
     overflow-y: auto;
 }
 
@@ -238,25 +255,28 @@ header h1 {
     margin-top: 0;
     color: #2c3e50;
     border-bottom: 2px solid #34495e;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    font-size: 1.1rem;
 }
 
 .history-card {
     background: #fdfdfd;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 12px;
+    margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
 .history-header {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
+    font-size: 13px;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
     border-bottom: 1px dashed #ddd;
+    flex-wrap: wrap;
+    gap: 4px;
 }
 
 .visit-date {
@@ -269,21 +289,17 @@ header h1 {
     font-weight: bold;
 }
 
-.photo-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #7f8c8d;
-    font-size: 14px;
+.visit-comment {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
 }
 
-/* 📸 写真エリアの設定（object-fit を contain に修正） */
+/* 📸 写真エリア・スライダー設定 */
 .photo-container { 
     width: 100%; 
-    height: 350px; /* 💡 縦幅を220pxから350pxに広げると、さらに写真が見やすくなります */
-    background-color: #2c3e50; /* 💡 背景を濃いグレー（または黒）にすると、写真の余白が引き締まります */
+    height: 280px; 
+    background-color: #2c3e50; 
     border-radius: 6px; 
     margin-bottom: 10px; 
     overflow: hidden; 
@@ -292,138 +308,141 @@ header h1 {
 .visit-img { 
     width: 100%; 
     height: 100%; 
-    object-fit: contain; /* 👈 cover から contain に変更！ */
+    object-fit: contain; 
 }
 
-/* ----------------------------------
-   複数画像スライダー（カルーセル）用のCSS
----------------------------------- */
-
-/* スライダー全体のコンテナ */
 .slider-container {
     position: relative;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* 画像を重ねるためのラッパー */
 .slider-wrapper {
     position: relative;
     width: 100%;
-    height: 300px; /* 画像の表示高さを固定（デザインに合わせて調整してください） */
+    height: 280px; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* スライダー内の画像設定 */
 .slider-wrapper .visit-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 枠に合わせてきれいにトリミング */
+    object-fit: contain; 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* 表示中（active）の画像だけを見せる */
 .slider-wrapper .visit-img.active {
     opacity: 1;
     visibility: visible;
-    position: relative; /* 重なりから解放して高さを保つ */
+    position: relative; 
 }
 
-/* 左右の矢印ボタン */
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
+    background-color: rgba(0, 0, 0, 0.6); 
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.2s;
 }
 
-.slider-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+.slider-btn.prev { left: 8px; }
+.slider-btn.next { right: 8px; }
 
-/* 左ボタンの位置 */
-.slider-btn.prev {
-    left: 10px;
-}
-
-/* 右ボタンの位置 */
-.slider-btn.next {
-    right: 10px;
-}
-
-/* 写真がないときの枠も高さを合わせる */
 .photo-placeholder {
     width: 100%;
-    height: 300px;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #e0e0e0;
     color: #666;
+    font-size: 13px;
 }
-/* タグボタンの基本スタイル */
-.btn-tag {
-  padding: 6px 14px;
-  border: 1px solid #d9d9d9;
+
+/* タグボタン・リセットボタン */
+.btn-tag, .btn-reset {
+  padding: 6px 12px;
   border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.btn-tag {
+  border: 1px solid #d9d9d9;
   background-color: #ffffff;
   color: #333333;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 14px;
 }
 
-/* カーソルを乗せたとき（未選択時） */
-.btn-tag:hover {
-  border-color: #40a9ff;
-  color: #40a9ff;
-}
-
-/* 選択されているとき（activeがついている状態） */
 .btn-tag.active {
-  background-color: #1890ff !important; /* メインカラー（青） */
+  background-color: #1890ff !important;
   border-color: #1890ff !important;
-  color: #ffffff !important;           /* 文字色を白に */
+  color: #ffffff !important;
   font-weight: bold;
 }
 
-/* リセットボタンのスタイル */
 .btn-reset {
-  padding: 6px 14px;
   border: 1px solid #ff4d4f;
-  border-radius: 20px;
   background-color: #ffffff;
   color: #ff4d4f;
-  cursor: pointer;
   font-weight: bold;
-  transition: all 0.2s ease;
-  font-size: 14px;
 }
 
 .btn-reset:hover {
   background-color: #ff4d4f;
   color: #ffffff;
+}
+
+/* --- 📱 スマートフォン向けメディアクエリ（画面幅 768px 以下） --- */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* 美食図鑑パネルを縦並び（1カラム）に変換 */
+    .zukan-panel {
+        flex-direction: column;
+    }
+
+    .zukan-left {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+        padding: 15px;
+    }
+
+    .zukan-right {
+        width: 100%;
+        max-height: none;
+        padding: 15px;
+    }
+
+    .shop-card {
+        flex: 0 0 240px; /* スマホでカードの横幅を調整 */
+    }
+
+    .slider-wrapper, .photo-container, .photo-placeholder {
+        height: 220px; /* スマホ画面で写真が高すぎないようコンパクト化 */
+    }
 }
