@@ -2,13 +2,16 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#007bff">
     <title>美食図鑑 - 詳細情報</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container zukan-page-container">
+        <a href="index.html" class="back-link" id="back-link">← 一覧に戻る</a>
+
         <div class="zukan-panel" id="myZukan" style="display: flex;">
             
             <div class="zukan-left">
@@ -17,10 +20,10 @@
                 <p class="zukan-meta"><strong>ジャンル：</strong> <span id="zukan-genre">-</span></p>
                 
                 <div class="zukan-buttons">
-                    <a href="#" target="_blank" class="official-link-btn" id="zukan-link">
+                    <a href="#" target="_blank" class="official-link-btn" id="zukan-link" rel="noopener">
                         公式サイトを見る ➔
                     </a>
-                    <a href="#" target="_blank" class="official-link-btn map" id="zukan-map">
+                    <a href="#" target="_blank" class="official-link-btn map" id="zukan-map" rel="noopener">
                         Googleマップに移動 ➔
                     </a>
                 </div>
@@ -50,14 +53,15 @@
                 if (shopData) {
                     document.getElementById('zukan-shop-name').textContent = shopData.name;
                     document.getElementById('zukan-area').textContent = shopData.city;
-                    document.getElementById('zukan-genre').textContent = shopData.genre;
+                    document.getElementById('zukan-genre').textContent = Array.isArray(shopData.genre) ? shopData.genre.join('・') : shopData.genre;
+                    document.title = shopData.name + ' - 美食図鑑';
 
                     const historyList = document.getElementById('history-list');
                     
                     const linkBtn = document.getElementById('zukan-link');
                     if (shopData.url && shopData.url !== '#') {
                         linkBtn.href = shopData.url;
-                        linkBtn.style.display = 'block';
+                        linkBtn.style.display = '';
                     } else {
                         linkBtn.style.display = 'none';
                     }
@@ -65,7 +69,7 @@
                     const mapBtn = document.getElementById('zukan-map');
                     if (shopData.map && shopData.map !== '#') {
                         mapBtn.href = shopData.map;
-                        mapBtn.style.display = 'block';
+                        mapBtn.style.display = '';
                     } else {
                         mapBtn.style.display = 'none';
                     }
@@ -79,15 +83,15 @@
                             item.photos.forEach((photoPath, photoIndex) => {
                                 const activeClass = photoIndex === 0 ? 'active' : '';
                                 imagesHTML += `
-                                    <img src="${photoPath}" class="visit-img ${activeClass}" alt="${item.menu}" 
+                                    <img src="${photoPath}" class="visit-img ${activeClass}" alt="${item.menu}" loading="lazy" 
                                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div class="photo-placeholder" style="display:none;">📷 写真のファイルが見つかりません</div>
                                 `;
                             });
 
                             if (item.photos.length > 1) {
-                                prevBtnHTML = `<button class="slider-btn prev" onclick="moveSlide(${index}, -1)">❮</button>`;
-                                nextBtnHTML = `<button class="slider-btn next" onclick="moveSlide(${index}, 1)">❯</button>`;
+                                prevBtnHTML = `<button class="slider-btn prev" aria-label="前の写真" onclick="moveSlide(${index}, -1)">❮</button>`;
+                                nextBtnHTML = `<button class="slider-btn next" aria-label="次の写真" onclick="moveSlide(${index}, 1)">❯</button>`;
                             }
                         } else {
                             imagesHTML = `<div class="photo-placeholder">📷 写真なし</div>`;
@@ -100,8 +104,7 @@
                                     <span class="menu-name">食べたもの：${item.menu}</span>
                                 </div>
                                 <div class="photo-container slider-container" 
-                                     data-card-index="${index}"
-                                     data-touch-startX="0">
+                                     data-card-index="${index}">
                                     ${prevBtnHTML}
                                     <div class="slider-wrapper">
                                         ${imagesHTML}
@@ -126,6 +129,14 @@
                 document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>⚠️ data.json を読み込めません。</h1>";
             });
 
+        document.getElementById('back-link').addEventListener('click', (e) => {
+            const cameFromList = document.referrer && new URL(document.referrer).origin === location.origin;
+            if (cameFromList && history.length > 1) {
+                e.preventDefault();
+                history.back();
+            }
+        });
+
         function moveSlide(cardIndex, direction) {
             const card = document.getElementById(`history-card-${cardIndex}`);
             const imgs = Array.from(card.querySelectorAll('.visit-img'));
@@ -145,18 +156,20 @@
         function initTouchSliders() {
             document.querySelectorAll('.slider-container').forEach(container => {
                 const cardIndex = container.getAttribute('data-card-index');
+                let startX = 0;
+                let startY = 0;
 
                 container.addEventListener('touchstart', (e) => {
-                    container.dataset.touchStartX = e.touches[0].clientX;
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
                 }, { passive: true });
 
                 container.addEventListener('touchend', (e) => {
-                    const startX = parseFloat(container.dataset.touchStartX);
-                    const endX = e.changedTouches[0].clientX;
-                    const diffX = startX - endX;
+                    const diffX = startX - e.changedTouches[0].clientX;
+                    const diffY = startY - e.changedTouches[0].clientY;
 
-                    // 50px以上スワイプしたら画像を切り替える
-                    if (Math.abs(diffX) > 50) {
+                    // 横に50px以上、かつ縦より横の動きが大きいときだけ画像を切り替える
+                    if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
                         if (diffX > 0) {
                             moveSlide(cardIndex, 1);  // 左スワイプで次へ
                         } else {

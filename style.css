@@ -5,7 +5,16 @@ body {
     color: #333;
     margin: 0;
     padding: 15px;
+    padding-left: max(15px, env(safe-area-inset-left));
+    padding-right: max(15px, env(safe-area-inset-right));
+    padding-bottom: max(15px, env(safe-area-inset-bottom));
     -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* hidden 属性を、display 指定より優先させる（絞り込みで使用） */
+[hidden] {
+    display: none !important;
 }
 
 .container {
@@ -109,13 +118,35 @@ header p {
     gap: 15px;
     margin-top: 15px;
     padding: 5px 2px 15px 2px;
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none;          
-    -ms-overflow-style: none;       
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: 2px;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #b0bec5 transparent;
 }
 
 .shop-grid::-webkit-scrollbar {
-    display: none;
+    height: 8px;
+}
+
+.shop-grid::-webkit-scrollbar-thumb {
+    background: #b0bec5;
+    border-radius: 4px;
+}
+
+/* タッチ端末ではスクロールバーを隠してすっきり見せる */
+@media (hover: none) {
+    .shop-grid {
+        scrollbar-width: none;
+    }
+    .shop-grid::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.area-section {
+    scroll-margin-top: 10px;
 }
 
 /* --- お店カードの設定 --- */
@@ -127,6 +158,29 @@ header p {
     display: flex;
     flex-direction: column;
     flex: 0 0 260px;
+    scroll-snap-align: start;
+}
+
+/* カード全体をタップできるリンクにする */
+.shop-link {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: inherit;
+    text-decoration: none;
+}
+
+.shop-link:focus-visible {
+    outline: 3px solid #007bff;
+    outline-offset: -3px;
+}
+
+.shop-image {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background-color: #ddd;
 }
 
 .shop-image-placeholder {
@@ -150,11 +204,14 @@ header p {
     color: #007bff;
     cursor: pointer;
     white-space: normal; /* スマホで店名が長い場合に折り返す */
+    line-height: 1.35;
 }
 
-.shop-name:hover {
-    text-decoration: underline;
-    color: #0056b3;
+@media (hover: hover) {
+    .shop-link:hover .shop-name {
+        text-decoration: underline;
+        color: #0056b3;
+    }
 }
 
 .shop-tags {
@@ -414,10 +471,186 @@ header p {
   color: #ffffff;
 }
 
-/* --- 📱 スマートフォン向けメディアクエリ（画面幅 768px 以下） --- */
+/* --- フィルター見出し・状態表示 --- */
+.filter-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-head h3 {
+    margin: 0;
+}
+
+.filter-sub {
+    margin-top: 15px !important;
+}
+
+.filter-status {
+    margin: 12px 0 0 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.load-error {
+    background: #fff3f3;
+    border: 1px solid #ff4d4f;
+    color: #c0392b;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-reset {
+    background: #fff;
+    flex-shrink: 0;
+}
+
+/* --- 先頭に戻るボタン --- */
+.btn-top {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    cursor: pointer;
+    z-index: 100;
+}
+
+.btn-top:active {
+    background-color: #0056b3;
+}
+
+/* --- 図鑑ページ：戻るリンク・ボタン --- */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: 8px;
+    padding: 0 4px;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.official-link-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 写真は横スワイプで切り替えるので、縦スクロールは邪魔しない */
+.slider-container {
+    touch-action: pan-y;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* --- 📱 スマートフォン向け（画面幅 768px 以下） --- */
 @media screen and (max-width: 768px) {
     body {
         padding: 10px;
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+    }
+
+    header {
+        padding: 6px 0 14px 0;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    /* 地図エリア（中身はそのまま。余白だけ少し詰める） */
+    .map-container {
+        padding: 14px;
+        margin-bottom: 18px;
+    }
+
+    /* エリアボタンは横いっぱいに並べて、押しやすく */
+    .area-buttons {
+        gap: 8px;
+    }
+
+    .btn-area {
+        flex: 1 1 0;
+        min-width: 80px;
+        min-height: 44px;
+        padding: 12px 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* フィルター：チップを横スクロールの1行にして、縦に長くならないようにする */
+    .filter-container {
+        padding: 12px;
+        margin-bottom: 18px;
+    }
+
+    .tag-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin: 0 -12px;
+        padding: 2px 12px 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .tag-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .btn-tag, .btn-reset {
+        flex-shrink: 0;
+        white-space: nowrap;
+        min-height: 40px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* お店リスト：画面の端まで横スクロールできるようにする */
+    .section-title {
+        font-size: 1.1rem;
+        margin-top: 22px;
+    }
+
+    .shop-grid {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        scroll-padding-left: 10px;
+        gap: 12px;
+    }
+
+    .shop-card {
+        flex: 0 0 62vw;
+        max-width: 250px;
+    }
+
+    .shop-image,
+    .shop-image-placeholder {
+        height: 130px;
+    }
+
+    .shop-name {
+        font-size: 15px;
     }
 
     /* 美食図鑑パネルを縦並び（1カラム）に変換 */
@@ -432,17 +665,45 @@ header p {
         padding: 15px;
     }
 
+    .zukan-shop-name {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    /* ボタンは横並びにして、画面の縦スペースを節約 */
+    .zukan-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 14px;
+    }
+
+    .zukan-buttons .official-link-btn {
+        flex: 1 1 140px;
+    }
+
     .zukan-right {
         width: 100%;
         max-height: none;
+        overflow-y: visible;
         padding: 15px;
     }
 
-    .shop-card {
-        flex: 0 0 240px; /* スマホでカードの横幅を調整 */
+    .history-card {
+        padding: 10px;
+    }
+
+    .visit-comment {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .slider-wrapper, .photo-container, .photo-placeholder {
-        height: 220px; /* スマホ画面で写真が高すぎないようコンパクト化 */
+        height: 240px;
+    }
+
+    .slider-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
     }
 }
