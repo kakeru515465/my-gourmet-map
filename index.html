@@ -2,7 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#007bff">
     <title>飯ログマップ</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,28 +27,30 @@
 
             <!-- タグ切り替えボタンのエリア -->
             <section class="filter-container">
-                <h3>📌 マイマップ リストから探す</h3>
+                <div class="filter-head">
+                    <h3>📌 マイマップ リストから探す</h3>
+                    <button id="btn-reset" class="btn-reset" type="button">🔄 リセット</button>
+                </div>
                 <div class="tag-filters">
                     <!-- 8種の特製タグ -->
-                    <button class="btn-tag" data-tag="sapporo-saikyo-ramen">🔥 札幌最強ラーメン決定戦</button>
-                    <button class="btn-tag" data-tag="asahikawa-son">🐻 旭川食べなきゃ損</button>
-                    <button class="btn-tag" data-tag="sapporo-miso">🌽 札幌味噌ラーメン</button>
-                    <button class="btn-tag" data-tag="ebetsu-son">🧱 江別食べなきゃ損</button>
-                    <button class="btn-tag" data-tag="sapporo-ninki-ramen">🥇 札幌人気ラーメン</button>
-                    <button class="btn-tag" data-tag="sapporo-chuka">🥟 札幌町中華</button>
-                    <button class="btn-tag" data-tag="asahikawa-ramen">🍜 旭川ラーメン</button>
-                    <button class="btn-tag" data-tag="sapporo-chahan">🍚 札幌炒飯</button>
-
-                    <button id="btn-reset" class="btn-reset">🔄 リセット</button>
+                    <button class="btn-tag" type="button" data-tag="sapporo-saikyo-ramen">🔥 札幌最強ラーメン決定戦</button>
+                    <button class="btn-tag" type="button" data-tag="asahikawa-son">🐻 旭川食べなきゃ損</button>
+                    <button class="btn-tag" type="button" data-tag="sapporo-miso">🌽 札幌味噌ラーメン</button>
+                    <button class="btn-tag" type="button" data-tag="ebetsu-son">🧱 江別食べなきゃ損</button>
+                    <button class="btn-tag" type="button" data-tag="sapporo-ninki-ramen">🥇 札幌人気ラーメン</button>
+                    <button class="btn-tag" type="button" data-tag="sapporo-chuka">🥟 札幌町中華</button>
+                    <button class="btn-tag" type="button" data-tag="asahikawa-ramen">🍜 旭川ラーメン</button>
+                    <button class="btn-tag" type="button" data-tag="sapporo-chahan">🍚 札幌炒飯</button>
                 </div>
 
-                <h3 style="margin-top: 15px;">🔍 基本ジャンル</h3>
+                <h3 class="filter-sub">🔍 基本ジャンル</h3>
                 <div class="tag-filters">
-                    <!-- 基本のジャンルタグ -->
-                    <button class="btn-tag" data-tag="ramen">ラーメン</button>
-                    <button class="btn-tag" data-tag="chahan">炒飯</button>
-                    <button class="btn-tag" data-tag="chinese">中華料理</button>
+                    <!-- 基本ジャンル：data.json の genre に含まれる文字で判定します -->
+                    <button class="btn-tag" type="button" data-genre="ラーメン">ラーメン</button>
+                    <button class="btn-tag" type="button" data-genre="炒飯">炒飯</button>
+                    <button class="btn-tag" type="button" data-genre="中華">中華料理</button>
                 </div>
+                <p id="filter-status" class="filter-status" hidden></p>
             </section>
 
             <section id="ebetu" class="area-section">
@@ -168,6 +171,8 @@
             </section>
         </main>
     </div>
+
+    <button id="btn-top" class="btn-top" type="button" aria-label="ページの先頭へ戻る" hidden>↑</button>
 
     <script src="script.js"></script>
 </body>
