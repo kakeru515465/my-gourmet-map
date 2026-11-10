@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <div class="container" style="margin-top: 40px;">
+    <div class="container zukan-page-container">
         <div class="zukan-panel" id="myZukan" style="display: flex;">
             
             <div class="zukan-left">
@@ -16,12 +16,14 @@
                 <h2 class="zukan-shop-name" id="zukan-shop-name">店名</h2>
                 <p class="zukan-meta"><strong>ジャンル：</strong> <span id="zukan-genre">-</span></p>
                 
-                <a href="#" target="_blank" class="official-link-btn" id="zukan-link">
-                    公式サイトを見る ➔
-                </a>
-                <a href="#" target="_blank" class="official-link-btn map" id="zukan-map">
-                    Googleマップに移動 ➔
-                </a>
+                <div class="zukan-buttons">
+                    <a href="#" target="_blank" class="official-link-btn" id="zukan-link">
+                        公式サイトを見る ➔
+                    </a>
+                    <a href="#" target="_blank" class="official-link-btn map" id="zukan-map">
+                        Googleマップに移動 ➔
+                    </a>
+                </div>
             </div>
             
             <div class="zukan-right">
@@ -32,11 +34,9 @@
     </div>
 
     <script>
-        // 1. URLの末尾（?shop=◯◯）から、どのお店が呼ばれたかを取得する
         const urlParams = new URLSearchParams(window.location.search);
         const shopId = urlParams.get('shop');
 
-        // 2. 作成した data.json ファイルを自動で読み込む
         fetch('data.json')
             .then(response => {
                 if (!response.ok) {
@@ -45,45 +45,37 @@
                 return response.json();
             })
             .then(shopDatabase => {
-                // 3. 呼ばれたお店のデータをJSONから引っ張ってくる
                 const shopData = shopDatabase[shopId];
 
-                // 4. データが存在したら、HTMLの枠に文字や画像を流し込む
                 if (shopData) {
                     document.getElementById('zukan-shop-name').textContent = shopData.name;
                     document.getElementById('zukan-area').textContent = shopData.city;
                     document.getElementById('zukan-genre').textContent = shopData.genre;
-                    document.getElementById('zukan-link').href = shopData.url;
-                    document.getElementById('zukan-map').href = shopData.map;
 
                     const historyList = document.getElementById('history-list');
                     
-                    // --- 🌐 公式サイトボタンの制御 ---
                     const linkBtn = document.getElementById('zukan-link');
                     if (shopData.url && shopData.url !== '#') {
                         linkBtn.href = shopData.url;
-                        linkBtn.style.display = 'inline-block'; // URLがあれば表示
+                        linkBtn.style.display = 'block';
                     } else {
-                        linkBtn.style.display = 'none'; // URLが '#' ならボタンごと消す
+                        linkBtn.style.display = 'none';
                     }
 
-                    // --- 🗺️ Googleマップボタンの制御 ---
                     const mapBtn = document.getElementById('zukan-map');
                     if (shopData.map && shopData.map !== '#') {
                         mapBtn.href = shopData.map;
-                        mapBtn.style.display = 'inline-block'; // マップURLがあれば表示
+                        mapBtn.style.display = 'block';
                     } else {
-                        mapBtn.style.display = 'none'; // マップURLが '#' ならボタンごと消す
+                        mapBtn.style.display = 'none';
                     }
 
-                    // 訪問履歴をループ処理
                     shopData.history.forEach((item, index) => {
                         let imagesHTML = '';
                         let prevBtnHTML = '';
                         let nextBtnHTML = '';
 
                         if (item.photos && item.photos.length > 0) {
-                            // 📸 画像タグを生成（最初の1枚だけ 'active' クラスをつける）
                             item.photos.forEach((photoPath, photoIndex) => {
                                 const activeClass = photoIndex === 0 ? 'active' : '';
                                 imagesHTML += `
@@ -93,24 +85,23 @@
                                 `;
                             });
 
-                            // 2枚以上ある場合は矢印ボタンを作る
                             if (item.photos.length > 1) {
                                 prevBtnHTML = `<button class="slider-btn prev" onclick="moveSlide(${index}, -1)">❮</button>`;
                                 nextBtnHTML = `<button class="slider-btn next" onclick="moveSlide(${index}, 1)">❯</button>`;
                             }
                         } else {
-                            // 写真が1枚もない場合
                             imagesHTML = `<div class="photo-placeholder">📷 写真なし</div>`;
                         }
 
-                        // 各カードに一意のID（history-card-0, 1...）を付与
                         const cardHTML = `
                             <div class="history-card" id="history-card-${index}">
                                 <div class="history-header">
                                     <span class="visit-date">${item.date}</span>
                                     <span class="menu-name">食べたもの：${item.menu}</span>
                                 </div>
-                                <div class="photo-container slider-container">
+                                <div class="photo-container slider-container" 
+                                     data-card-index="${index}"
+                                     data-touch-startX="0">
                                     ${prevBtnHTML}
                                     <div class="slider-wrapper">
                                         ${imagesHTML}
@@ -122,35 +113,58 @@
                         `;
                         historyList.innerHTML += cardHTML;
                     });
+
+                    // 📱 スマホ用タッチスワイプ（指での左右スライド）イベントの追加
+                    initTouchSliders();
+
                 } else {
-                    document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>⚠️ お店のデータがJSON内に見つかりませんでした。</h1>";
+                    document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>⚠️ お店のデータが見つかりませんでした。</h1>";
                 }
             })
             .catch(error => {
                 console.error(error);
-                document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>⚠️ data.json を読み込めません。ファイル配置やカンマの有無を確認してください。</h1>";
+                document.body.innerHTML = "<h1 style='text-align:center; margin-top:50px;'>⚠️ data.json を読み込めません。</h1>";
             });
 
-        // 🔄 スライドを切り替える関数
         function moveSlide(cardIndex, direction) {
             const card = document.getElementById(`history-card-${cardIndex}`);
-            // placeholderを覗いた、本物の画像（.visit-img）だけを取得
             const imgs = Array.from(card.querySelectorAll('.visit-img'));
             if (imgs.length <= 1) return;
 
-            // 現在表示されている画像のインデックスを見つける
             let currentIndex = imgs.findIndex(img => img.classList.contains('active'));
-            
-            // 現在の画像の表示を消す
             imgs[currentIndex].classList.remove('active');
 
-            // 次のインデックスを計算（最初と最後をループさせる処理）
             currentIndex += direction;
             if (currentIndex >= imgs.length) currentIndex = 0;
             if (currentIndex < 0) currentIndex = imgs.length - 1;
 
-            // 次の画像を表示する
             imgs[currentIndex].classList.add('active');
+        }
+
+        // スマホでのスワイプ操作を可能にする関数
+        function initTouchSliders() {
+            document.querySelectorAll('.slider-container').forEach(container => {
+                const cardIndex = container.getAttribute('data-card-index');
+
+                container.addEventListener('touchstart', (e) => {
+                    container.dataset.touchStartX = e.touches[0].clientX;
+                }, { passive: true });
+
+                container.addEventListener('touchend', (e) => {
+                    const startX = parseFloat(container.dataset.touchStartX);
+                    const endX = e.changedTouches[0].clientX;
+                    const diffX = startX - endX;
+
+                    // 50px以上スワイプしたら画像を切り替える
+                    if (Math.abs(diffX) > 50) {
+                        if (diffX > 0) {
+                            moveSlide(cardIndex, 1);  // 左スワイプで次へ
+                        } else {
+                            moveSlide(cardIndex, -1); // 右スワイプで前へ
+                        }
+                    }
+                }, { passive: true });
+            });
         }
     </script>
 </body>
