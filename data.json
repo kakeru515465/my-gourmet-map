@@ -666,6 +666,22 @@
             }
         ]
     },
+    "gulliver_2": {
+        "name": "ガリバーⅡ",
+        "city": "札幌市",
+        "genre": ["洋食", "オムライス"],
+        "tags": "",
+        "url": "",
+        "map": "https://maps.app.goo.gl/QS5nb6ZRUDLhBc7M8",
+        "history": [
+            {
+                "date": "2026年11月14日",
+                "menu": "オムライス",
+                "comment": "",
+                "photos": ["images/札幌市/ガリバーⅡ_2026年11月14日.jpg"]
+            }
+        ]
+    },
     "tsutsumibito": {
         "name": "餃子と中華 つつみ人",
         "city": "札幌市",

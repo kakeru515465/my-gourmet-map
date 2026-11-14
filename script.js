@@ -66,6 +66,22 @@ fetch(JSON_FILE_PATH)
     return res.json();
   })
   .then(shops => {
+    // ➕ 各地域ごとの件数を集計して、それぞれのエリア見出しに表示
+    const cityCounts = {};
+    Object.values(shops).forEach(shop => {
+      if (shop && shop.city) {
+        cityCounts[shop.city] = (cityCounts[shop.city] || 0) + 1;
+      }
+    });
+
+    document.querySelectorAll('.area-section').forEach(section => {
+      const city = section.getAttribute('data-city');
+      const countSpan = section.querySelector('.city-count');
+      if (city && countSpan && cityCounts[city] !== undefined) {
+        countSpan.textContent = `(${cityCounts[city]}件)`;
+      }
+    });
+
     // 1. 新しく訪れた順に並び替え（カードが描画される前に、属性だけで判定する）
     document.querySelectorAll('.shop-grid').forEach(grid => {
       const cards = Array.from(grid.querySelectorAll('shop-card'));
